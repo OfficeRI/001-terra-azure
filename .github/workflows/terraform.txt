@@ -32,4 +32,8 @@ jobs:
       #working-directory: ${{ env.ROOT_PATH }}
     - name: terraform Plan
       run: terraform plan 
+<<<<<<< HEAD:.github/workflows/terraform.yml
       #working-directory: ${{ env.ROOT_PATH }}
+=======
+      working-directory: ${{ env.ROOT_PATH }}
+>>>>>>> f819f6ec33c2886c749d8439407b5965ed8da68f:.github/workflows/terraform.txt
