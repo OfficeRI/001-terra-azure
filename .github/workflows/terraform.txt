@@ -5,7 +5,7 @@ on:
     - main
   pull_request:
 env: 
-      #ROOT_PATH: '${{github.workspace}}/actions/001-TERRA-AZURE/001-terra-azure/'
+      ROOT_PATH: '${{github.workspace}}/actions'
       ARM_CLIENT_ID: ${{secrets.AZURE_CLIENT_ID}}
       ARM_CLIENT_SECRET: ${{secrets.AZURE_CLIENT_SECRET}}
       ARM_SUBSCRIPTION_ID: ${{secrets.AZURE_SUBSCRIPTION_ID}}
@@ -29,11 +29,7 @@ jobs:
         cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
     - name: terraform init
       run: terraform init
-      #working-directory: ${{ env.ROOT_PATH }}
+      working-directory: ${{ env.ROOT_PATH }}
     - name: terraform Plan
       run: terraform plan 
-<<<<<<< HEAD:.github/workflows/terraform.yml
-      #working-directory: ${{ env.ROOT_PATH }}
-=======
       working-directory: ${{ env.ROOT_PATH }}
->>>>>>> f819f6ec33c2886c749d8439407b5965ed8da68f:.github/workflows/terraform.txt
